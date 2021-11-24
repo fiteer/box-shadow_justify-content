@@ -1,0 +1,105 @@
+#justify {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #justify :where(.flex-start, .flex-end, .center,
+                .space-between, .space-around,.space-evenly){
+    display: flex;
+    justify-content: space-between;
+    width: 73%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+  }
+ 
+  #justify :where(.flex-start-items, .flex-end-items, .center-items,
+                .space-between-items, .space-around-items,.space-evenly-items){
+    display: flex;
+    flex-direction: column;
+    background-color: #3498d0;
+    width: 30%;
+    height: 80vh;
+    border-radius: 20px;
+    position: relative;
+    margin: 10px;
+    align-items: center;
+    left: -1120%;
+    transition: all 1s;
+    padding-top: 10px;
+  }
+  .flex-start-items{
+    justify-content: flex-start;
+  }
+  
+  .flex-end-items {
+    justify-content: flex-end;
+  }
+  
+  .center-items { 
+    justify-content: center; 
+  }
+  
+  .space-between-items { 
+    justify-content: space-between; 
+  }
+  .space-around-items {
+    justify-content: space-around; 
+  }
+  .space-evenly-items { 
+    justify-content: space-evenly; 
+  }
+ 
+  
+  #justify :where(#item1, #item2, #item3, #item4, #item5, #item6){
+    padding: 13px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #ffb300;
+    width: 15px;
+  }
+  
+  .flex-start-items{
+    animation: column .5s ease-in-out forwards;
+  }
+  .flex-end-items{
+    animation: column 1s 3s ease-in-out forwards;
+  }
+  .center-items{
+    animation: column 1s 6s ease-in-out forwards;
+  }
+  .space-between-items{
+    animation: column 1s 9s ease-in-out forwards;
+  }
+  .space-around-items{
+    animation: column 1s 12s ease-in-out forwards;
+  }
+  .space-evenly-items{
+    animation: column 1s 15s ease-in-out forwards;
+  }
+  @keyframes column{
+    0%{
+      left: -100%;
+    }
+    20%{
+      left: 0%;
+    }
+    40%{
+      left: -20%;
+    }
+    60%{
+      left: 0%;
+    }
+    80%{
+      top: -5%;
+    }
+    100%{
+      left: 0%; 
+    }
+  }
+  

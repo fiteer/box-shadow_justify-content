@@ -1,0 +1,110 @@
+#justify {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #justify :where(.flex-start, .flex-end, .center,
+                .space-between, .space-around,.space-evenly){
+    display: flex;
+    justify-content: space-between;
+    width: 73%;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-top: 0px;
+  }
+  #justify :where(.flex-start-items, .flex-end-items, .center-items,
+                .space-between-items, .space-around-items,.space-evenly-items){
+    display: flex;
+    flex-direction: row;
+    background-color: #3498d0;
+    padding: 10px;
+    width: 80%;
+    border-radius: 20px;
+    position: relative;
+    left: -120%;
+    transition: all 1s;
+  }
+
+  .flex-start-items{
+    justify-content: flex-start;
+  }
+  
+  .flex-end-items {
+    justify-content: flex-end;
+  }
+  
+  .center-items { 
+    justify-content: center; 
+  }
+  
+  .space-between-items { 
+    justify-content: space-between; 
+  }
+  .space-around-items {
+    justify-content: space-around; 
+  }
+  .space-evenly-items { 
+    justify-content: space-evenly; 
+  }
+ 
+  
+  #justify :where(#item1, #item2, #item3, #item4, #item5, #item6){
+    padding: 13px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #ffb300;
+    width: 15px;
+  }
+  
+  .start{
+    padding: 22px;
+    background-color: #3498d0;
+    height: 0;
+    width: 3%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+  }
+   .flex-start-items.active{
+    left: 100%;
+    animation: -end .5s ease-in-out forwards;
+  }
+  .flex-end-items.active{
+    left: 100%;
+    animation: -end 1s 3s ease-in-out forwards;
+  }
+  .center-items.active{
+    left: 100%;
+    animation: -end 1s 6s ease-in-out forwards;
+  }
+  .space-between-items.active{
+    left: 100%;
+    animation: -end 1s 9s ease-in-out forwards;
+  }
+  .space-around-items.active{
+    left: 100%;
+    animation: -end 1s 12s ease-in-out forwards;
+  }
+  .space-evenly-items.active{
+    left: 100%;
+    animation: -end 1s 15s ease-in-out forwards;
+  }
+  @keyframes -end{
+    0%{
+      right: -120%;
+    }
+    100%{
+      left: 0%; 
+    }
+  }
+
+  
